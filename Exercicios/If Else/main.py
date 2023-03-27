@@ -33,3 +33,12 @@ if pwd == "1234":
     print("Acesso Permitido!")
 else: 
     print("Acesso Negado!")
+
+#4 As maçãs custam R$ 0,30 cada uma se forem compradas menos do que uma dúzia, e R$ 0,25 se forem compradas pelo menos doze. Escreva um programa que leia o número de maçãs compradas, calcule e escreva o valor total da compra.
+
+qtd = int(input("Quantas maçãs você deseja comprar?: "))
+
+if qtd < 12:
+    print(f"Você comprou {qtd} maçãs e o preço foi de R${qtd * 0.25}")
+else:
+    print(f"Você comprou {qtd} maçãs e o preço foi de R${qtd * 0.30}")
