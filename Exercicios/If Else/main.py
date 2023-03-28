@@ -42,3 +42,23 @@ if qtd < 12:
     print(f"Você comprou {qtd} maçãs e o preço foi de R${qtd * 0.25}")
 else:
     print(f"Você comprou {qtd} maçãs e o preço foi de R${qtd * 0.30}")
+
+#5 Escreva um programa para ler 3 valores inteiros (considere que não serão lidos valores iguais) e escrevê-los em ordem crescente.
+
+num1 = int(input("Digite o primeiro número: "))
+num2 = int(input("Digite o segundo número: "))
+num3 = int(input("Digite o terceiro número: "))
+
+if num1 > num2 and num1 > num3 and num2 > num3:
+    print(num3, num2, num1)
+elif num1 > num2 and num1 > num3 and num3 > num2:
+    print(num2, num3, num1)
+elif num2 > num1 and num2 > num3 and num1 > num3:
+    print(num3, num1, num2)
+elif num2 > num1 and num2 > num3 and num3 > num1:
+    print(num1, num3, num2)
+elif num3 > num2 and num3 > num1 and num2 > num1:
+    print(num1, num2, num3)
+else: 
+    print(num2, num1, num3)
+
