@@ -62,3 +62,34 @@ elif num3 > num2 and num3 > num1 and num2 > num1:
 else: 
     print(num2, num1, num3)
 
+#6 Tendo como entrada a altura e o sexo (codificando da seguinte forma: 1:feminino 2:masculino) de uma pessoa, construa um programa que calcule e imprima seu peso ideal, utilizando as seguintes Fórmulas:
+# - Para homens: (72.7 * Altura) - 58
+# - Para mulheres: (62.1 * Altura) - 44.7
+
+sexo = int(input("Digite seu Sexo 1-Feminino 2-Masculino: "))
+altura = float(input("Digite sua altura: "))
+
+if sexo == 1:
+    print(f"Seu peso ideal é: {(62.1 * altura) - 44.7:.2f} kg")
+else:
+    print(f"Seu peso ideal é: {(72.7 * altura) - 58:.2f} kg")
+
+#7 Escreva um programa para ler o número de lados de um polígono regular e a medida do lado (em cm). Calcular e imprimir o seguinte:
+# - Se o número de lados for igual a 3, escrever TRIÂNGULO e o valor da área.
+# - Se o número de lados for igual a 4, escrever QUADRADO e o valor da área.
+# - Se o número de lados for igual a 5, escrever PENTÁGONO.
+
+sides = int(input("Digite o número de lados do seu polígono: "))
+
+if sides != 3 and sides != 4 and sides != 5:
+    print("Seu polígono é desconhecido")
+elif sides == 5:
+    print("Seu polígono é um pentágono")
+else:
+    sideSize = float(input("Digite o tamanho em cm de um dos lados: "))
+    if sides == 3:
+        height = float(input("Digite a altura de seu triângulo: "))
+        print(f"Seu polígono é um triângulo e sua área é: {(sideSize * height) / 2} cm")
+    elif sides == 4:
+        print(f"Seu polígono é um quadrado e sua área é: {sideSize * sideSize} cm")
+
