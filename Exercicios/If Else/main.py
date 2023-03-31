@@ -93,3 +93,36 @@ else:
     elif sides == 4:
         print(f"Seu polígono é um quadrado e sua área é: {sideSize * sideSize} cm")
 
+#8 Acrescente as seguintes mensagens à solução do exercício anterior conforme o caso.
+# - Caso o número de lados seja inferior a 3 escrever NÃO É UM POLÍGONO. 
+# - Caso o número de lados seja superior a 5 escrever POLÍGONO NÃO IDENTIFICADO.
+
+sides = int(input("Digite o número de lados do seu polígono: "))
+
+if sides < 3:
+    print("Não é um polígono.")
+if sides > 5:
+    print("Polígono não identificado.")
+elif sides == 5:
+    print("Seu polígono é um pentágono")
+else:
+    sideSize = float(input("Digite o tamanho em cm de um dos lados: "))
+    if sides == 3:
+        height = float(input("Digite a altura de seu triângulo: "))
+        print(f"Seu polígono é um triângulo e sua área é: {(sideSize * height) / 2} cm")
+    elif sides == 4:
+        print(f"Seu polígono é um quadrado e sua área é: {sideSize * sideSize} cm")
+
+#9 Escreva um programa para ler 3 valores inteiros e escrever o maior deles.
+# Considere que o usuário não informará valores iguais.
+
+num1 = int(input("Digite o primeiro número: "))
+num2 = int(input("Digite o segundo número: "))
+num3 = int(input("Digite o terceiro número: "))
+
+if num1 > num2 and num1 > num3:
+    print(f"O maior número é: {num1}")
+elif num2 > num1 and num2 > num3:
+    print(f"O maior número é: {num2}")
+else:
+    print(f"O maior número é: {num3}")
