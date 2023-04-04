@@ -126,3 +126,43 @@ elif num2 > num1 and num2 > num3:
     print(f"O maior número é: {num2}")
 else:
     print(f"O maior número é: {num3}")
+
+#10 Escreva um programa que leia as medidas dos lados de um triângulo e escreva se ele é Equilátero, Isóceles ou Escaleno. Sendo que:
+# - Triângulo Equilátero: possui os 3 lados iguais.
+# - Triângulo Isócele: possui 2 lados iguais.
+# - Triângulo Escaleno: possui 3 lados diferentes.
+
+side1 = int(input("Escreva em cm a medida do primeiro lado do seu triângulo: "))
+side2 = int(input("Escreva em cm a medida do segundo lado do seu triângulo: "))
+side3 = int(input("Escreva em cm a medida do terceiro lado do seu triângulo: "))
+
+if side1 == side2 and side1 == side3:
+    print("Seu triângulo é Equilátero pois possui os três lados iguais")
+elif (side1 == side2 and side3 != side2) or (side2 == side3 and side1 != side3) or (side3 == side1 and side2 != side1):
+    print("Seu triângulo é Isócele pois possui dois lados iguais")
+else:
+    print("Seu triângulo é Escaleno pois possui três lados diferentes")
+
+# 11 Escreva um programa que leia o valor de 3 ângulos de um triângulo e escreva se o triângulo é Acutângulo, Retângulo ou Obtusângulo. Sendo que:
+# - Triângulo Retângulo: possui um ângulo reto. (igual a 90º)
+# - Triângulo Obtusângulo: possui um ângulo obtuso. (maior que 90º)
+# - Triângulo Acutângulo: possui um três ângulos agudos. (menor que 90º)
+
+# 11 Escreva um programa que leia o valor de 3 ângulos de um triângulo e escreva se o triângulo é Acutângulo, Retângulo ou Obtusângulo. Sendo que:
+# - Triângulo Retângulo: possui um ângulo reto. (igual a 90º)
+# - Triângulo Obtusângulo: possui um ângulo obtuso. (maior que 90º)
+# - Triângulo Acutângulo: possui três ângulos agudos. (menor que 90º)
+
+ang1 = int(input("Escreva quantos graus tem o primeiro ângulo: "))
+ang2 = int(input("Escreva quantos graus tem o segundo ângulo: "))
+ang3 = int(input("Escreva quantos graus tem o terceiro ângulo: "))
+
+if ang1 + ang2 + ang3 == 180:
+    if ang1 == 90 or ang2 == 90 or ang3 == 90:
+        print("Seu triângulo é Retângulo por conter pelo menos um dos ângulos igual a 90 graus")
+    elif ang1 > 90 or ang2 > 90 or ang3 > 90:
+        print("Seu triângulo é Obtusângulo por conter pelo menos um dos ângulos maior que 90 graus")
+    else:
+        print("Seu triângulo é Acutângulo por conter três angulos agudos")
+else:
+    print("A soma dos seus ângulos não atinge ou ultrapassa 180 graus.")
