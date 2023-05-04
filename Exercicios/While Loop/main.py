@@ -5,12 +5,12 @@ nota = int(input("Digite uma nota entre zero e dez: "))
 while not (nota > 0 and nota < 11):
     nota = int(input("A nota inserida não atende os requisitos, Digite uma nota entre zero e dez: "))
 
-2 - Faça um programa que leia e valide as seguintes informações: 
-- a. Nome: maior que 3 caracteres; 
-- b. Idade: entre 0 e 100. 
-- c. Salário: maior que zero. 
-- d. Sexo: 'f' ou 'm'. 
-- e. Estado Civil: 's', 'c', 'v', 'd';
+# 2 - Faça um programa que leia e valide as seguintes informações: 
+# - a. Nome: maior que 3 caracteres; 
+# - b. Idade: entre 0 e 100. 
+# - c. Salário: maior que zero. 
+# - d. Sexo: 'f' ou 'm'. 
+# - e. Estado Civil: 's', 'c', 'v', 'd';
 
 nome = input("Digite seu nome: ")
 while len(nome) < 4:
