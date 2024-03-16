@@ -96,7 +96,13 @@ EXERCICIO
 '''
 
 def busca_linear(lista, numero_a_procurar):
-    pass
+    i = 0
+    while i < len(lista):
+        fotografa((i,lista[i]))
+        if lista[i] == numero_a_procurar:
+            return i
+        i = i + 1
+    return False
 
 '''
 EXERCICIO
@@ -127,11 +133,11 @@ EXPLICACAO:
 
     Coloque os valores das médias nas variáveis a seguir
 '''
-media_1_5 = 0 #media de 1 a 5
-media_2_4 = 0
-media_3_3 = 0
+media_1_5 = 3 #media de 1 a 5
+media_2_4 = 3 
+media_3_3 = 3 
 
-media_9_5 = 0
+media_9_5 = 7
 
 
 '''
@@ -156,7 +162,7 @@ arredondada para baixo
 '''
 
 def media_arredondada(nro1, nro2):
-    pass
+    return (nro1+nro2)//2
 
 
 
@@ -199,7 +205,8 @@ O número da lista que está nesse indice é o 406.
 
 '''
 def numero_do_meio(lista,comeco,fim):
-    pass
+    indice = media_arredondada(comeco,fim)
+    return lista[indice]
 
 
 '''
@@ -275,6 +282,17 @@ dica: return comeco,final #so deixei isso aqui pra voce lembrar como retornar 2 
 '''
 
 def passo_da_busca_binaria(lista,procurando,menor_i,maior_i):
+    nro_meio = numero_do_meio(lista, menor_i,maior_i)
+    idx_meio = media_arredondada(menor_i,maior_i)
+    if procurando != nro_meio and menor_i == maior_i:
+        return False
+    if procurando == nro_meio:
+        return True
+    if procurando > nro_meio:
+        return(idx_meio+1,maior_i)
+    if procurando < nro_meio:
+        return(menor_i,idx_meio-1)
+    
     return comeco,final #so deixei isso aqui pra voce lembrar como retornar 2 numeros
 
 '''
@@ -311,7 +329,8 @@ Crie uma funcao tam_do_intervalo(inicio,fim) que
 conta quantos números ainda temos "sob suspeita"
 '''
 def tam_do_intervalo(inicio,fim):
-    pass
+    if (inicio > fim): return 0
+    return (fim-inicio)+1
 
 '''
 EXERCICIO
